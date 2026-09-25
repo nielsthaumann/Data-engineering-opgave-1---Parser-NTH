@@ -22,7 +22,7 @@ import unittest
 import pathvalidate
 ```
 
-**Read table data and out as binary data and a string**
+**Read table data as binary data and a string**
 
 Syntax:
 ```python
