@@ -21,9 +21,11 @@ import pathvalidate
 ```
 
 **Read table data and out as binary data and a string**
-    
-        Syntax:     raw, string = readtable(filepath)
 
+    Syntax: 
+```python
+ raw, string = readtable(filepath)
+```
 
 **Detect character encoding standard**
         
