@@ -1,6 +1,6 @@
 # Data engineering project 1 - Parser
 
-parser.py
+[parser.py](https://github.com/nielsthaumann/Data-engineering-opgave-1---Parser-NTH/blob/main/parser.py)
 
 **Building, testing, and running a table data parser, 'Tabble', for converting CVS-file to JSON-file.**
 
