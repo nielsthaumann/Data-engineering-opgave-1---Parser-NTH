@@ -8,6 +8,15 @@
 
 # Building the table data parser
 
+**Import required libaries**
+import numpy as np
+import pandas as pd
+import pycld2 as cld2
+import re
+from datetime import datetime
+import unittest
+import pathvalidate
+
 **Read table data and out as binary data and a string**
     
         Syntax:     raw, string = readtable(filepath)
