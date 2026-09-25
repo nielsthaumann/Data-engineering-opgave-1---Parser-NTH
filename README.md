@@ -22,7 +22,7 @@ import pathvalidate
 
 **Read table data and out as binary data and a string**
 
-    Syntax: 
+Syntax: 
 ```python
  raw, string = readtable(filepath)
 ```
@@ -31,10 +31,11 @@ import pathvalidate
         
 > Using Google's CLD2 language detection for Python ([pycld2 on PyPI](https://pypi.org/project/pycld2))
 
-    Syntax:
+Syntax: 
+```python
             
             charec, percent, language = detect_charcode(raw, charecs)
-            
+```            
             
         Input: 
             
@@ -105,6 +106,7 @@ import pathvalidate
 
 **Import table content as a string**
 
+```python
 class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, making it a test case class)
     
     Ensure the file path is a valid file path
@@ -124,9 +126,9 @@ class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, maki
     def test_bytes2string(self): 
         # string output length is greater than zero
         self.assertGreater(len(readtable(filepath)[1]), 0)
-
+```
 **Select the character encoding standard**
-
+```python
 class TestDetect_charcode(unittest.TestCase):
     
     Ensure the character encoding standard can be detected
@@ -137,9 +139,9 @@ class TestDetect_charcode(unittest.TestCase):
     def test_select_charcode(self): 
         # data output length is greater than zero
         self.assertGreater(len(select_charcode(raw, charecs, charec, language)), 0)   
-    
+```
 **Select the line break delimiter**
-
+```python
 class TestLinebreaks(unittest.TestCase):
     
     Ensure the line break delimiter can be detected
@@ -150,9 +152,9 @@ class TestLinebreaks(unittest.TestCase):
     lines output length is greater than zero
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_linebreaks(data_decoded, linebreaks, linebreak, n_linebreaks)), 0)   
-    
+```
 **Select the column delimiter**
-
+```python
 class TestColdim(unittest.TestCase):
     
     Ensure the column delimiter can be detected
@@ -163,9 +165,9 @@ class TestColdim(unittest.TestCase):
     data output length is greater than zero
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_coldim(lines, coldims, coldim, n_coldims)), 0)   
-
+```
 **Header in first line?**
-
+```python
 class TestHeader(unittest.TestCase):
     
     Ensure the header can be selected
@@ -174,7 +176,7 @@ class TestHeader(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
- 
+ ```
 
 # Running 'Tabble'
 
