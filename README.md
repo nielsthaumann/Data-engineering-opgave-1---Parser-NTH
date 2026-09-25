@@ -2,7 +2,9 @@
 
 Building, testing, and running a table data parser, 'Tabble', for converting CVS-file to JSON-file.  
 
-<img width="434" height="440" alt="image" src="https://github.com/user-attachments/assets/e1b11f80-0efc-4338-ac4a-9a98c6254c21" />
+<p align="center">
+    <img width="434" height="440" alt="image" src="https://github.com/user-attachments/assets/e1b11f80-0efc-4338-ac4a-9a98c6254c21" />
+</p>
 
 # Building the table data parser
 
