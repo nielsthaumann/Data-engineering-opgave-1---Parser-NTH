@@ -17,7 +17,7 @@ Detect character encoding standard:
         
         Using Google's CLD2 language detection for Python ([pycld2 on PyPI](https://pypi.org/project/pycld2))
 
-**Syntax:**
+    **Syntax:**
             
             charec, percent, language = detect_charcode(raw, charecs)
             
