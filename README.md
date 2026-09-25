@@ -1,5 +1,7 @@
 # Data engineering project 1 - Parser
 
+parser.py
+
 **Building, testing, and running a table data parser, 'Tabble', for converting CVS-file to JSON-file.**
 
 <p align="center">
