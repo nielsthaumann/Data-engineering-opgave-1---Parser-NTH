@@ -33,7 +33,7 @@ Syntax:
 
 Syntax:
 ```python
-                        charec, percent, language = detect_charcode(raw, charecs)
+            charec, percent, language = detect_charcode(raw, charecs)
 ```            
             
         Input: 
@@ -56,7 +56,7 @@ Syntax:
         
         Syntax:
 ```python
-                        data = select_charcode(raw, charecs, charec, language)
+            data = select_charcode(raw, charecs, charec, language)
 ```            
             
         Input: 
@@ -79,7 +79,7 @@ Syntax:
     
         Syntax:
 ```python
-                  coldim, n_coldims = detect_coldim(string, coldims)
+            coldim, n_coldims = detect_coldim(string, coldims)
 ```        
         Input:   
             
@@ -97,7 +97,7 @@ Syntax:
     
         Syntax:   
 ```python
-                  dataframe = select_header(data_cells)
+            dataframe = select_header(data_cells)
 ```          
         
 **Select cell data format**
