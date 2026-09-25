@@ -85,7 +85,7 @@ Building, testing, and running a table data parser, 'Tabble', for converting CVS
 
 # Unit tests
 
-# Import table content as a string
+Import table content as a string
 class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, making it a test case class)
     
     # Ensure the file path is a valid file path
