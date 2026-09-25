@@ -88,7 +88,7 @@ Building, testing, and running a table data parser, 'Tabble', for converting CVS
 Import table content as a string
 class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, making it a test case class)
     
-    # Ensure the file path is a valid file path
+    Ensure the file path is a valid file path
     def test_filepath(self):
         folderpath = 'C:\\Users\\NielsHumann\\Documents\\Specialisterne Academy\\Opgave 1 - Parser'
         filename   = 'employees.ascii.csv'
@@ -96,56 +96,56 @@ class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, maki
         filepath   = folderpath + '\\' + filename
         self.assertTrue(pathvalidate.is_valid_filepath(filepath, platform='auto'))
     
-    # Ensure the data can be read
+    Ensure the data can be read
     def test_fileread(self): 
         # raw output length is greater than zero
         self.assertGreater(len(readtable(filepath)[0]), 0)
     
-    # Ensure the raw bytes can be converted to a string
+    Ensure the raw bytes can be converted to a string
     def test_bytes2string(self): 
         # string output length is greater than zero
         self.assertGreater(len(readtable(filepath)[1]), 0)
 
-# Select the character encoding standard
+Select the character encoding standard
 class TestDetect_charcode(unittest.TestCase):
     
-    # Ensure the character encoding standard can be detected
+    Ensure the character encoding standard can be detected
     def test_detect_charcode(self): 
         self.assertEqual(detect_charcode(raw, charecs)[0], 'UTF-8')
     
-    # Ensure the character encoding standard can be selected
+    Ensure the character encoding standard can be selected
     def test_select_charcode(self): 
         # data output length is greater than zero
         self.assertGreater(len(select_charcode(raw, charecs, charec, language)), 0)   
     
-# Select the line break delimiter
+Select the line break delimiter
 class TestLinebreaks(unittest.TestCase):
     
-    # Ensure the line break delimiter can be detected
+    Ensure the line break delimiter can be detected
     def test_detect_linebreaks(self): 
         self.assertEqual(detect_linebreaks(string, linebreaks)[0], 'new line / line feed')
     
-    # Ensure the line break delimiter can be selected
-    # lines output length is greater than zero
+    Ensure the line break delimiter can be selected
+    lines output length is greater than zero
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_linebreaks(data_decoded, linebreaks, linebreak, n_linebreaks)), 0)   
     
-# Select the column delimiter
+Select the column delimiter
 class TestColdim(unittest.TestCase):
     
-    # Ensure the column delimiter can be detected
+    Ensure the column delimiter can be detected
     def test_detect_coldim(self): 
         self.assertEqual(detect_coldim(string, coldims)[0], 'comma')
     
-    # Ensure the column delimiter can be selected
-    # data output length is greater than zero
+    Ensure the column delimiter can be selected
+    data output length is greater than zero
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_coldim(lines, coldims, coldim, n_coldims)), 0)   
 
-# Header in first line?
+Header in first line?
 class TestHeader(unittest.TestCase):
     
-    # Ensure the header can be selected
+    Ensure the header can be selected
     def test_select_header(self): 
         self.assertEqual(list(select_header(data_cells)), ['"name', 'email', 'department', 'role', 'salary', 'start_date', 'office'])
 
