@@ -1,4 +1,4 @@
-# Data engineering opgave 1 - Parser NTH
+# Data engineering opgave 1 - Parser
 
 Building, testing, and running a table data parser, 'Tabble', for converting CVS-file to JSON-file.  
 
