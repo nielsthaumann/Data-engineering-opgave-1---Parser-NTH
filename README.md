@@ -56,7 +56,7 @@ Syntax:
         
 Syntax:
 ```python
-        data = select_charcode(raw, charecs, charec, language)
+        data_decoded = select_charcode(raw, charecs, charec, language)
 ```            
             
         Input: 
