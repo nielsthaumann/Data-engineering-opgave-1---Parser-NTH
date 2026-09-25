@@ -22,19 +22,18 @@ import pathvalidate
 
 **Read table data and out as binary data and a string**
 
-Syntax: 
+Syntax:
 ```python
- raw, string = readtable(filepath)
+        raw, string = readtable(filepath)
 ```
 
 **Detect character encoding standard**
         
 > Using Google's CLD2 language detection for Python ([pycld2 on PyPI](https://pypi.org/project/pycld2))
 
-Syntax: 
+Syntax:
 ```python
-            
-            charec, percent, language = detect_charcode(raw, charecs)
+                        charec, percent, language = detect_charcode(raw, charecs)
 ```            
             
         Input: 
@@ -55,10 +54,10 @@ Syntax:
 
 **Select character encoding standard**
         
-        Syntax: 
-            
-            data = select_charcode(raw, charecs, charec, language)
-            
+        Syntax:
+```python
+                        data = select_charcode(raw, charecs, charec, language)
+```            
             
         Input: 
             
@@ -78,8 +77,10 @@ Syntax:
 
 **Select the column delimiter**
     
-        Syntax:   coldim, n_coldims = detect_coldim(string, coldims)
-        
+        Syntax:
+```python
+                  coldim, n_coldims = detect_coldim(string, coldims)
+```        
         Input:   
             
                   string:    Raw data as string (output from readtable)
@@ -94,12 +95,17 @@ Syntax:
 
 **Header in first line?**
     
-        Syntax:   dataframe = select_header(data_cells)
+        Syntax:   
+```python
+                  dataframe = select_header(data_cells)
+```          
         
 **Select cell data format**
         
-        Syntax:   dataframe = select_cellform(dataframe)
-
+        Syntax:   
+ ```python        
+        dataframe = select_cellform(dataframe)
+```  
 
 
 # Unit tests
