@@ -9,6 +9,7 @@
 # Building the table data parser
 
 **Import required libaries**
+
 import numpy as np
 import pandas as pd
 import pycld2 as cld2
