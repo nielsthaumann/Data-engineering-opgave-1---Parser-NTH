@@ -33,7 +33,7 @@ Syntax:
 
 Syntax:
 ```python
-            charec, percent, language = detect_charcode(raw, charecs)
+        charec, percent, language = detect_charcode(raw, charecs)
 ```            
             
         Input: 
@@ -54,9 +54,9 @@ Syntax:
 
 **Select character encoding standard**
         
-        Syntax:
+Syntax:
 ```python
-            data = select_charcode(raw, charecs, charec, language)
+        data = select_charcode(raw, charecs, charec, language)
 ```            
             
         Input: 
@@ -77,9 +77,9 @@ Syntax:
 
 **Select the column delimiter**
     
-        Syntax:
+Syntax:
 ```python
-            coldim, n_coldims = detect_coldim(string, coldims)
+        coldim, n_coldims = detect_coldim(string, coldims)
 ```        
         Input:   
             
@@ -95,14 +95,14 @@ Syntax:
 
 **Header in first line?**
     
-        Syntax:   
+Syntax:   
 ```python
-            dataframe = select_header(data_cells)
+        dataframe = select_header(data_cells)
 ```          
         
 **Select cell data format**
         
-        Syntax:   
+Syntax:   
  ```python        
         dataframe = select_cellform(dataframe)
 ```  
