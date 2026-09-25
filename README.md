@@ -75,7 +75,46 @@ Syntax:
             data_decoded:       Decoded data
 
 
-**Select the column delimiter**
+**Detect line breaks**
+
+Syntax:   
+```python
+        linebreak, n_linebreaks = detect_linebreaks(string, linebreaks)
+```      
+        Input: 
+                
+                string:        Raw data as string (output from readtable)
+                
+                linebreaks:    2d list with possible line break types and character sequences (e.g., [['carriage return line feed', 'carriage return', 'new line / line feed'], ['\\r\\n', '\\r', '\\n']])
+            
+        Outut: 
+            
+                linebreak:     Detect line break type
+                    
+                n_linebreaks:  Number of line break character sequences
+
+**Select line breaks**
+
+Syntax:   
+```python
+        lines = select_linebreaks(data_decoded, linebreaks, linebreak, n_linebreaks)
+```        
+        Input: 
+                
+                data_decoded:  Decoded data
+                
+                linebreaks:    2d list with possible line break types and character sequences (e.g., [['carriage return line feed', 'carriage return', 'new line / line feed'], ['\\r\\n', '\\r', '\\n']])
+                
+                linebreak:     Detect line break type
+                    
+                n_linebreaks:  Number of line break character sequences
+                
+        Outut: 
+            
+                lines:         Data parsed into strings of lines 
+
+
+**Detect the column delimiter**
     
 Syntax:
 ```python
@@ -93,13 +132,33 @@ Syntax:
                   
                   n_coldims:    Number of column delimiter character sequences
 
+**Select the column delimiter**
+    
+Syntax:
+```python
+        data = select_coldim(lines, coldims, coldim, n_coldims)
+```
+        Input: 
+            
+                  lines:        Data parsed into strings of lines 
+            
+                  coldims:      2d list with possible column delimiter types and character sequences (e.g., [['tab', 'comma', 'double quotes', 'backslash', 'semicolon', 'pipe', 'space'], [r'\t', r',', r'"', r'\\', r';', r'\|', r'\s']])
+                  
+                  coldim:       Detected column delimiter type
+                  
+                  n_coldims:    Number of column delimiter character sequences
+            
+        Output: 
+            
+                  data_cells:   Data parsed into cells of lines and columns ( data_cells[line or row][column] )
+
 **Header in first line?**
     
 Syntax:   
 ```python
         dataframe = select_header(data_cells)
 ```          
-        
+
 **Select cell data format**
         
 Syntax:   
@@ -107,6 +166,11 @@ Syntax:
         dataframe = select_cellform(dataframe)
 ```  
 
+**Export to JSON**
+```python
+print(f'Saving table to {filename[0:-4]}.json')
+dataframe.to_json(folderpath + '\\' + filename[0:-4] + '.json', date_format='iso')
+```
 
 # Unit tests
 
