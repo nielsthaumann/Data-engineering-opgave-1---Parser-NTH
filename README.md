@@ -221,7 +221,7 @@ class TestLinebreaks(unittest.TestCase):
         self.assertEqual(detect_linebreaks(string, linebreaks)[0], 'new line / line feed')
     
     # Ensure the line break delimiter can be selected
-    lines output length is greater than zero
+    # lines output length is greater than zero
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_linebreaks(data_decoded, linebreaks, linebreak, n_linebreaks)), 0)   
 ```
@@ -234,7 +234,7 @@ class TestColdim(unittest.TestCase):
         self.assertEqual(detect_coldim(string, coldims)[0], 'comma')
     
     # Ensure the column delimiter can be selected
-    data output length is greater than zero
+    # data output length is greater than zero
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_coldim(lines, coldims, coldim, n_coldims)), 0)   
 ```
