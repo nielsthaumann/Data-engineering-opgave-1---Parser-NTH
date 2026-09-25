@@ -6,12 +6,12 @@ Building, testing, and running a table data parser, 'Tabble', for converting CVS
 
 # Building the table data parser, 'Tabble', for converting CVS-file to JSON-file
 
-Step 1. Read table data and out as binary data and a string
+Read table data and out as binary data and a string: 
     
         Syntax:     raw, string = readtable(filepath)
 
 
-Step 2. Detect character encoding standard
+Detect character encoding standard: 
         
         Using Google's CLD2 language detection for Python ( https://pypi.org/project/pycld2/ ) 
         
@@ -37,7 +37,7 @@ Step 2. Detect character encoding standard
             language:   Name of detected language
 
 
-Step 3. Select character encoding standard
+Select character encoding standard: 
         
         Syntax: 
             
@@ -60,7 +60,7 @@ Step 3. Select character encoding standard
             data_decoded:       Decoded data
 
 
-Step 4. Select the column delimiter
+Select the column delimiter: 
     
         Syntax:   coldim, n_coldims = detect_coldim(string, coldims)
         
@@ -76,11 +76,11 @@ Step 4. Select the column delimiter
                   
                   n_coldims:    Number of column delimiter character sequences
 
-Step 5: Header in first line?
+Header in first line?
     
         Syntax:   dataframe = select_header(data_cells)
         
-Step 6: Select cell data format
+Select cell data format: 
         
         Syntax:   dataframe = select_cellform(dataframe)
 
