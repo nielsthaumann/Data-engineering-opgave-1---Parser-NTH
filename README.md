@@ -1,6 +1,6 @@
 # Data engineering project 1 - Parser
 
-Building, testing, and running a table data parser, 'Tabble', for converting CVS-file to JSON-file.  
+**Building, testing, and running a table data parser, 'Tabble', for converting CVS-file to JSON-file.**
 
 <p align="center">
     <img width="434" height="440" alt="image" src="https://github.com/user-attachments/assets/e1b11f80-0efc-4338-ac4a-9a98c6254c21" />
@@ -8,12 +8,12 @@ Building, testing, and running a table data parser, 'Tabble', for converting CVS
 
 # Building the table data parser
 
-Read table data and out as binary data and a string: 
+**Read table data and out as binary data and a string**
     
         Syntax:     raw, string = readtable(filepath)
 
 
-Detect character encoding standard: 
+**Detect character encoding standard**
         
 > Using Google's CLD2 language detection for Python ([pycld2 on PyPI](https://pypi.org/project/pycld2))
 
@@ -38,7 +38,7 @@ Detect character encoding standard:
             language:   Name of detected language
 
 
-Select character encoding standard: 
+**Select character encoding standard**
         
         Syntax: 
             
@@ -61,7 +61,7 @@ Select character encoding standard:
             data_decoded:       Decoded data
 
 
-Select the column delimiter: 
+**Select the column delimiter**
     
         Syntax:   coldim, n_coldims = detect_coldim(string, coldims)
         
@@ -77,11 +77,11 @@ Select the column delimiter:
                   
                   n_coldims:    Number of column delimiter character sequences
 
-Header in first line?
+**Header in first line?**
     
         Syntax:   dataframe = select_header(data_cells)
         
-Select cell data format: 
+**Select cell data format**
         
         Syntax:   dataframe = select_cellform(dataframe)
 
@@ -89,7 +89,8 @@ Select cell data format:
 
 # Unit tests
 
-Import table content as a string
+**Import table content as a string**
+
 class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, making it a test case class)
     
     Ensure the file path is a valid file path
@@ -110,7 +111,8 @@ class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, maki
         # string output length is greater than zero
         self.assertGreater(len(readtable(filepath)[1]), 0)
 
-Select the character encoding standard
+**Select the character encoding standard**
+
 class TestDetect_charcode(unittest.TestCase):
     
     Ensure the character encoding standard can be detected
@@ -122,7 +124,8 @@ class TestDetect_charcode(unittest.TestCase):
         # data output length is greater than zero
         self.assertGreater(len(select_charcode(raw, charecs, charec, language)), 0)   
     
-Select the line break delimiter
+**Select the line break delimiter**
+
 class TestLinebreaks(unittest.TestCase):
     
     Ensure the line break delimiter can be detected
@@ -134,7 +137,8 @@ class TestLinebreaks(unittest.TestCase):
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_linebreaks(data_decoded, linebreaks, linebreak, n_linebreaks)), 0)   
     
-Select the column delimiter
+**Select the column delimiter**
+
 class TestColdim(unittest.TestCase):
     
     Ensure the column delimiter can be detected
@@ -146,7 +150,8 @@ class TestColdim(unittest.TestCase):
     def test_select_linebreaks(self): 
         self.assertGreater(len(select_coldim(lines, coldims, coldim, n_coldims)), 0)   
 
-Header in first line?
+**Header in first line?**
+
 class TestHeader(unittest.TestCase):
     
     Ensure the header can be selected
