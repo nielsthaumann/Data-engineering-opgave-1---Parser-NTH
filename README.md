@@ -174,7 +174,7 @@ dataframe.to_json(folderpath + '\\' + filename[0:-4] + '.json', date_format='iso
 
 # Unit tests
 
-**Import table content as a string**
+**Read table data as binary data and a string**
 
 ```python
 class TestReadtable(unittest.TestCase): # (Inherits from unittest.TestCase, making it a test case class)
