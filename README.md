@@ -165,4 +165,5 @@ if __name__ == '__main__':
 # Running 'Tabble'
 
 
-<img width="1935" height="982" alt="image" src="https://github.com/user-attachments/assets/41dd46ee-1649-42c8-9db2-c4d07b1b49c8" />
+<img width="1935" height="982" alt="Running Tabble" src="https://github.com/user-attachments/assets/c29a8df8-e9cc-44c1-8f6d-d438dc555e2d" />
+
