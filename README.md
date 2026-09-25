@@ -15,7 +15,7 @@ Read table data and out as binary data and a string:
 
 Detect character encoding standard: 
         
-        Using Google's CLD2 language detection for Python ([pycld2 on PyPI](https://pypi.org/project/pycld2))
+> Using Google's CLD2 language detection for Python ([pycld2 on PyPI](https://pypi.org/project/pycld2))
 
     Syntax:
             
