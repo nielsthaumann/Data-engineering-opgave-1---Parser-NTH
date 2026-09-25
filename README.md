@@ -136,7 +136,7 @@ Syntax:
     
 Syntax:
 ```python
-        data = select_coldim(lines, coldims, coldim, n_coldims)
+        data_cells = select_coldim(lines, coldims, coldim, n_coldims)
 ```
         Input: 
             
